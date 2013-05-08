@@ -9,37 +9,30 @@ public class Mano {
 	}
 
 	public Resultado jugarCon(final Mano otra) {
-	 if (this.forma == otra.forma)
-	 {
+	 if (this.forma == otra.forma){
       return Resultado.EMPATA;
 	 }
 	 else
-	   if (this.forma == Forma.SPOCK && (otra.forma == Forma.TIJERA || otra.forma == Forma.PIEDRA))
-	    {
+	   if (this.forma == Forma.SPOCK && (otra.forma == Forma.TIJERA || otra.forma == Forma.PIEDRA)){
 		   return Resultado.GANA;
 	    }
 	   else
-		 if (this.forma == Forma.PIEDRA && (otra.forma == Forma.TIJERA || otra.forma == Forma.LAGARTO))
-		  {
+		 if (this.forma == Forma.PIEDRA && (otra.forma == Forma.TIJERA || otra.forma == Forma.LAGARTO)){
 			 return Resultado.GANA;
 		  }
 		 else
-		   if (this.forma == Forma.LAGARTO && (otra.forma == Forma.SPOCK || otra.forma == Forma.PAPEL))
-		    {
+		   if (this.forma == Forma.LAGARTO && (otra.forma == Forma.SPOCK || otra.forma == Forma.PAPEL)){
 			   return Resultado.GANA;
 		    }
 		   else
-		     if (this.forma == Forma.PAPEL && (otra.forma == Forma.PIEDRA || otra.forma == Forma.SPOCK))
-			  {
+		     if (this.forma == Forma.PAPEL && (otra.forma == Forma.PIEDRA || otra.forma == Forma.SPOCK)){
 		    	 return Resultado.GANA;
 			  }
 			 else
-			   if (this.forma == Forma.TIJERA && (otra.forma == Forma.PAPEL || otra.forma == Forma.LAGARTO))
-				{
+			   if (this.forma == Forma.TIJERA && (otra.forma == Forma.PAPEL || otra.forma == Forma.LAGARTO)){
 				   return Resultado.GANA;
 				}
-			   else
-			   {
+			   else{
 				 return Resultado.PIERDE;
 			   }
       }
